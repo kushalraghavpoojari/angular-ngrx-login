@@ -3,10 +3,10 @@
         <span>Logo</span>
     </div>
     <ul class="header__list-right">
-        <li class="header__list-right__item">
+        <li class="header__list-right__item" [routerLink]="['/login']" *ngIf="isLoggedOut$ | async">
             <span class="header__list-right__item-text">Login</span>
         </li>
-        <li class="header__list-right__item">
+        <li class="header__list-right__item" *ngIf="isLoggedIn$ | async">
             <span class="header__list-right__item-text">Logout</span>
         </li>
     </ul>
