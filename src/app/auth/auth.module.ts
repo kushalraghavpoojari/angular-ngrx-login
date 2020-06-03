@@ -11,6 +11,8 @@ import { LoginComponent } from './login/login.component';
 
 import { AuthReducer } from './auth.reducer';
 import { HttpClientModule } from '@angular/common/http';
+import { EffectsModule } from '@ngrx/effects';
+import { AuthEffects } from './auth.effects';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     RouterModule.forChild([{ path: '', component: LoginComponent }]),
     StoreModule.forFeature('auth', AuthReducer),
+    EffectsModule.forFeature([AuthEffects])
   ]
 })
 export class AuthModule {
