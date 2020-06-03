@@ -6,7 +6,7 @@
         <!-- <li class="header__list-right__item" [routerLink]="['/login']" *ngIf="isLoggedOut$ | async">
             <span class="header__list-right__item-text">Login</span>
         </li> -->
-        <li class="header__list-right__item" *ngIf="isLoggedIn$ | async">
+        <li class="header__list-right__item" *ngIf="isLoggedIn$ | async" (click)="logout()">
             <span class="header__list-right__item-text">Logout</span>
         </li>
     </ul>
