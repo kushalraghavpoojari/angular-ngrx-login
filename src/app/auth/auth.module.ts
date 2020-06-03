@@ -27,4 +27,10 @@ import { HttpClientModule } from '@angular/common/http';
     StoreModule.forFeature('auth', AuthReducer),
   ]
 })
-export class AuthModule { }
+export class AuthModule {
+  static forRoot() {
+    return {
+      ngModule: AuthModule
+    }
+  }
+}
