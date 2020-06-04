@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class AuthEffects {
     logout$ = createEffect(() => this.action$.pipe(
         ofType(logout),
-        tap(action => {
+        tap(() => {
             this.router.navigateByUrl('/');
         })
     ), { dispatch: false });

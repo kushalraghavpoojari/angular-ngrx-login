@@ -9,7 +9,7 @@ import { isLoggedIn } from './auth.selectors';
 export class AuthGuard implements CanActivate {
     constructor(private store: Store<AppState>, private router: Router) {}
 
-    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    canActivate() {
         return this.store.pipe(
             select(isLoggedIn),
             tap(loggedIn => {

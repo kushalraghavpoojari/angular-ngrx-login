@@ -30,10 +30,4 @@ import { AuthEffects } from './auth.effects';
     EffectsModule.forFeature([AuthEffects])
   ]
 })
-export class AuthModule {
-  static forRoot() {
-    return {
-      ngModule: AuthModule
-    }
-  }
-}
+export class AuthModule {}

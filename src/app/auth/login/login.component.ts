@@ -22,7 +22,7 @@ export class LoginComponent {
       });
   }
 
-  login() {
+  login(): void {
     const { email, password } = this.form.value;
 
     this.authService

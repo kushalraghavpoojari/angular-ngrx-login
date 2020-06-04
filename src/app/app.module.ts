@@ -26,7 +26,7 @@ import { EffectsModule } from '@ngrx/effects';
     HttpClientModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    AuthModule.forRoot(),
+    AuthModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([])
